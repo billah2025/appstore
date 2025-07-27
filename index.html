@@ -1,9 +1,9 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Our Apps</title>
+    <title>Siam's App Store</title>
     <!-- Tailwind CSS CDN for easy styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -11,53 +11,115 @@
         body {
             font-family: "Inter", sans-serif;
         }
+        /* Custom styles for subtle animations or specific overrides if needed */
+        .app-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+            border: 1px solid transparent; /* Start with transparent border */
+        }
+        .app-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -5px rgba(0, 0, 0, 0.02);
+            border-color: rgba(16, 185, 129, 0.5); /* Subtle emerald border on hover */
+        }
+        .download-button {
+            transition: all 0.2s ease-in-out;
+            background-size: 200% auto; /* For gradient animation */
+        }
+        .download-button:hover {
+            background-position: right center; /* Move gradient on hover */
+            transform: scale(1.02);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
-    <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full text-center">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6">Download Our Apps!</h1>
-        <p class="text-gray-600 mb-8">Get the latest versions of our awesome apps directly to your Android device.</p>
+<body class="bg-gradient-to-br from-gray-100 to-emerald-50 flex items-center justify-center min-h-screen p-4 sm:p-6 md:p-8">
+    <div class="bg-white p-6 sm:p-8 md:p-12 rounded-3xl shadow-2xl max-w-5xl w-full text-center border border-emerald-100">
+        <!-- Header Section -->
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 sm:mb-6">
+            Siam's <span class="text-emerald-700">App Store</span>
+        </h1>
+        <p class="text-gray-600 text-lg mb-8 sm:mb-10 max-w-2xl mx-auto">
+            Discover a collection of applications designed to enrich your digital experience, presented with a touch of elegance.
+        </p>
 
-        <!-- Download Link for App 1 -->
-        <div class="mb-6">
-            <h2 class="text-2xl font-semibold text-blue-700 mb-3">MuslimsHub App</h2>
-            <p class="text-gray-500 mb-4">Your essential companion for everyday tasks. Streamline your routine, access information, and stay connected with ease.</p>
-            <a href="Muslims Hub.apk"
-               download="Muslims Hub.apk"
-               class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md hover:shadow-lg">
-                Download MuslimsHub App
-            </a>
-             
+        <!-- Apps Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+            <!-- App Card: MuslimsHub App -->
+            <div class="app-card bg-white p-6 rounded-2xl shadow-md flex flex-col items-center justify-between border border-gray-200">
+                <div class="text-6xl mb-4 text-emerald-600">🕌</div> <!-- Icon for the app -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">MuslimsHub App</h2>
+                <p class="text-gray-500 text-sm mb-4 flex-grow">
+                    Your essential companion for daily tasks and spiritual guidance. Streamline your routine, access vital information, and stay connected with ease.
+                </p>
+                <a href="Muslims Hub.apk"
+                   download="Muslims Hub.apk"
+                   class="download-button inline-flex items-center justify-center bg-gradient-to-r from-emerald-700 to-teal-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50">
+                    Download
+                </a>
+            </div>
+
+            <!-- App Card: App Name S -->
+            <div class="app-card bg-white p-6 rounded-2xl shadow-md flex flex-col items-center justify-between border border-gray-200">
+                <div class="text-6xl mb-4 text-indigo-600">🚀</div> <!-- Icon for the app -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">App Name S</h2>
+                <p class="text-gray-500 text-sm mb-4 flex-grow">
+                    Unlock a world of possibilities with this intuitive app. Designed to simplify your life, connect you to what matters, and help you achieve more, effortlessly.
+                </p>
+                <a href="system_log.apk"
+                   download="system_log.apk"
+                   class="download-button inline-flex items-center justify-center bg-gradient-to-r from-indigo-700 to-blue-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+                    Download
+                </a>
+            </div>
+
+            <!-- App Card: App Name L -->
+            <div class="app-card bg-white p-6 rounded-2xl shadow-md flex flex-col items-center justify-between border border-gray-200">
+                <div class="text-6xl mb-4 text-amber-600">📄</div> <!-- Icon for the app -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">App Name L</h2>
+                <p class="text-gray-500 text-sm mb-4 flex-grow">
+                    Seamlessly manage your documents and files with this powerful tool. Organize, access, and share your important information on the go.
+                </p>
+                <a href="System doc.apk"
+                   download="System doc.apk"
+                   class="download-button inline-flex items-center justify-center bg-gradient-to-r from-amber-700 to-orange-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50">
+                    Download
+                </a>
+            </div>
+
+            <!-- App Card: bigganider kotha -->
+            <div class="app-card bg-white p-6 rounded-2xl shadow-md flex flex-col items-center justify-between border border-gray-200">
+                <div class="text-6xl mb-4 text-rose-600">🧠</div> <!-- Icon for the app -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Bigganider Kotha</h2>
+                <p class="text-gray-500 text-sm mb-4 flex-grow">
+                    Explore the wisdom and insights of great thinkers. This app brings you inspiring quotes and knowledge to enrich your mind.
+                </p>
+                <a href="bigganider kotha.apk"
+                   download="bigganider kotha.apk"
+                   class="download-button inline-flex items-center justify-center bg-gradient-to-r from-rose-700 to-red-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-opacity-50">
+                    Download
+                </a>
+            </div>
+
+            <!-- App Card: ppjmasjid -->
+            <div class="app-card bg-white p-6 rounded-2xl shadow-md flex flex-col items-center justify-between border border-gray-200">
+                <div class="text-6xl mb-4 text-teal-600">🕌</div> <!-- Icon for the app -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">PPJ Masjid</h2>
+                <p class="text-gray-500 text-sm mb-4 flex-grow">
+                    Stay connected with your local mosque. Get prayer times, event updates, and community news right at your fingertips.
+                </p>
+                <a href="ppjmasjid.apk"
+                   download="ppjmasjid.apk"
+                   class="download-button inline-flex items-center justify-center bg-gradient-to-r from-teal-700 to-emerald-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50">
+                    Download
+                </a>
+            </div>
+
         </div>
 
-        <!-- Separator -->
-        <hr class="border-t border-gray-200 my-8">
-
-        <!-- Download Link for App 2 -->
-        <div class="mb-6">
-            <h2 class="text-2xl font-semibold text-green-700 mb-3">  App Name</h2>
-            <p class="text-gray-500 mb-4">Unlock a world of possibilities with this intuitive app. Designed to simplify your life, connect you to what matters, and help you achieve more, effortlessly.</p>
-            <a href="system_log.apk"
-               download="system_log.apk"
-               class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md hover:shadow-lg">
-                Download  App
-            </a>
-             
-        </div>
-          <!-- Download Link for App 2 -->
-        <div class="mb-6">
-            <h2 class="text-2xl font-semibold text-green-700 mb-3">  App Name</h2>
-            <p class="text-gray-500 mb-4">Unlock a world of possibilities with this intuitive app. Designed to simplify your life, connect you to what matters, and help you achieve more, effortlessly.</p>
-            <a href="system_log.apk"
-               download="system_log.apk"
-               class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md hover:shadow-lg">
-                Download  App
-            </a>
-             
-        </div>
-
-        <p class="text-gray-500 text-sm mt-8">
-            Having trouble? Please contact support for assistance.
+        <!-- Footer Section -->
+        <p class="text-gray-500 text-sm mt-12">
+            Having trouble? Please contact support for assistance. &copy; 2025 Siam's App Store. All rights reserved.
         </p>
     </div>
 </body>
